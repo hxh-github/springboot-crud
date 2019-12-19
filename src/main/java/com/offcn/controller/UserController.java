@@ -71,6 +71,7 @@ public class UserController {
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Long id) {
         userService.deleteUser(id);
+        System.out.println("成功了");
         return "redirect:/manageruser/";
 
     }
